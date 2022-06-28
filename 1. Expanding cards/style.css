@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Typeface;
+    src: url(fonts/ja-jp.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Typeface;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.container {
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    margin: 10px;
+    flex: 0.5;
+    color: #fff;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+
+.panel h2 {
+    position: absolute;
+    bottom: 25px;
+    left: 50px;
+    font-weight: 100;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
